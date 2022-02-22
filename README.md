@@ -1,5 +1,9 @@
 # SWE_Tutorial
 
+# Heading
+## Subheading
+
+
 Hello! Welcome to Caroline Ehler's documentation/tutorial I've compiled for the Software Everywhere project!
 This tutorial is specific to Turbonomic.
 
@@ -15,8 +19,10 @@ B. Download Homebrew's Node.js: https://sourabhbajaj.com/mac-setup/Node.js/
 
 C. Download Homebrew's Docker: https://sourabhbajaj.com/mac-setup/Docker/
 BUT I find this tutorial a little confusing. Here is what to do:
-$ brew install cask
-$ brew install --cask docker
+```bash
+brew install cask
+brew install --cask docker
+```
 
 :) Done
 
