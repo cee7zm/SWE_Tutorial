@@ -1,3 +1,4 @@
+![](images/IBM_Software_Everywhere.png)
 # Heading
 ## Subheading
 
