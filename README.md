@@ -30,8 +30,25 @@ brew install --cask docker
 D. If you don't have an IDE, I'm going to be using VS Code, so be sure to download that too.
 
 ### Begin Tutorial
-1. Clone the Iascable Repo here: https://github.com/cloud-native-toolkit/iascable.
-2. Create a file called ```gitopsbootstrap-bom.yaml``` _where_ 
+1. Create Cluster
+2. Clone the Iascable Repo here: https://github.com/cloud-native-toolkit/iascable.
+3. Download this Bill of Materials (BOM1): https://github.com/cloud-native-toolkit/automation-solutions/blob/main/boms/turbonomic/turbo-gitops-bom.yaml 
+5. Build Turbonomics Bill of Materials (BOM) with iascable tool
+```bash 
+./iascable build -i <location of BOM1 yaml> -o <location for output>
+```
+6. Within the location of output from above, edit the resulting tfvars file with your environment info for your cluster
+7. Set your ibmapikey first
+8. Run the automation with a docker terraform container 
+```bash
+docker run -it -e TF_VAR_ibmcloud_api_key=$APIKEY -e IBMCLOUD_API_KEY=$APIKEY -v ${PWD}:/terraform -w /terraform quay.io/ibmgaragecloud/cli-tools:v0.15
+```
+
+
+/*
+5.  Pull this file down: https://github.com/cloud-native-toolkit/automation-solutions/blob/main/boms/turbonomic/turbo-gitops-bom.yaml 
+6. 
+4. Create a Bill of Materials (BOM) called ```gitopsbootstrap-bom.yaml``` ?where?
 
 ```python
 apiVersion: cloud.ibm.com/v1alpha1
@@ -51,10 +68,7 @@ spec:
         - name: banner_text
           important: true
   ```
-    
-3. Pull this file down: https://github.com/cloud-native-toolkit/automation-solutions/blob/main/boms/turbonomic/turbo-gitops-bom.yaml 
-4. 
-
+  */
 ## Contributing
 
 
