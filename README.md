@@ -11,11 +11,10 @@ See below for complete tutorial.
 
 ## Tutorial
 ### Set-Up
-To begin, you'll need to be sure to have all of these things installed on your machine:
--Docker
--Node.js
+To begin, you'll need to be sure to have all of these things installed on your machine: Docker & Node.js
 
 If you don't, follow these steps:
+
 A. Download Homebrew: https://sourabhbajaj.com/mac-setup/Homebrew/
 Follow the Homebrew setup tutorial.
 
@@ -54,6 +53,7 @@ spec:
   ```
     
 3. Pull this file down: https://github.com/cloud-native-toolkit/automation-solutions/blob/main/boms/turbonomic/turbo-gitops-bom.yaml 
+4. 
 
 ## Contributing
 
