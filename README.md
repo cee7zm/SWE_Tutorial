@@ -37,6 +37,7 @@ D. If you don't have an IDE, I'm going to be using VS Code, so be sure to downlo
 ```bash 
 ./iascable build -i <location of BOM1 yaml> -o <location for output>
 ```
+Note: the location should be a path
 6. Within the location of output from above, edit the resulting tfvars file with your environment info for your cluster
 7. Set your ibmapikey first
 8. Run the automation with a docker terraform container 
