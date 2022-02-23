@@ -1,6 +1,5 @@
 ![](images/IBM_Software_Everywhere.png)
 # Software Everywhere Turbonomics BEGINNER Tutorial
-## Subheading
 
 Hello! Welcome to Caroline Ehler's documentation/tutorial I've compiled for the Software Everywhere project!
 This tutorial is specific to Turbonomic.
@@ -33,6 +32,7 @@ D. If you don't have an IDE, I'm going to be using VS Code, so be sure to downlo
 1. Create Cluster
 2. Clone the Iascable Repo here: https://github.com/cloud-native-toolkit/iascable.
 3. Download this Bill of Materials (BOM1): https://github.com/cloud-native-toolkit/automation-solutions/blob/main/boms/turbonomic/turbo-gitops-bom.yaml 
+4. go to iascable directory
 5. Build Turbonomics Bill of Materials (BOM) with iascable tool
 ```bash 
 ./iascable build -i <location of BOM1 yaml> -o <location for output>
