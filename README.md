@@ -30,10 +30,15 @@ D. If you don't have an IDE, I'm going to be using VS Code, so be sure to downlo
 
 ### Begin Tutorial
 1. Create Cluster
-2. Clone the Iascable Repo here: https://github.com/cloud-native-toolkit/iascable.
-3. Download this Bill of Materials (BOM1): https://github.com/cloud-native-toolkit/automation-solutions/blob/main/boms/turbonomic/turbo-gitops-bom.yaml 
-4. go to iascable directory
-5. Build Turbonomics Bill of Materials (BOM) with iascable tool
+2. Clone the Iascable Repo here: https://github.com/cloud-native-toolkit/iascable
+```bash
+git clone https://github.com/cloud-native-toolkit/iascable.git
+```
+
+
+4. Download this Bill of Materials (BOM1): https://github.com/cloud-native-toolkit/automation-solutions/blob/main/boms/turbonomic/turbo-gitops-bom.yaml 
+5. go to iascable directory
+6. Build Turbonomics Bill of Materials (BOM) with iascable tool
 ```bash 
 ./iascable build -i <location of BOM1 yaml> -o <location for output>
 ```
