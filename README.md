@@ -71,12 +71,16 @@ spec:
 7. Edit the file ```multicloud-cluster.auto.tfvars```
 
 Uncomment the last line of each section to add your modifications. 
+
 a. Banner Text: The title of the top banner in the cluster
 ```config_banner_text="Turbonomics Tutorial"```
+
 b. Namespace Name = The value that should be used for the namespace
 ```namespace_name="gitops-tools"```
+
 c. Server URL: The url for the OpenShift api
 ```server_url="https://c100-e.us-east.containers.cloud.ibm.com:31361"```
+
 To access this, go to the OpenShift console from your cluster. 
 ![](images/IBM_Software_Everywhere.png)
 Click the dropdown from your username.
