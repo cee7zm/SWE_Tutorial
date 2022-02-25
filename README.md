@@ -27,7 +27,7 @@ D. If you don't have an IDE, I'm going to be using VS Code, so be sure to downlo
 ### Begin Tutorial
 1. Create a cluster on Red Hat Openshift using IBM Cloud. https://cloud.ibm.com/ 
 
-![](images/ibmcloudss.png)
+![](images/ibmcloudss.png | width=100)
 
 2. Clone the Iascable Repo here: https://github.com/cloud-native-toolkit/iascable
 ```bash
@@ -79,11 +79,11 @@ spec:
 
 To access this, go to the OpenShift console from your cluster. 
 
-![](images/osconsole.png)
+![](images/osconsole.png | width=100)
 
 Click the dropdown from your username.
 
-![](images/loginos.png)
+![](images/loginos.png | width=100)
 
 Click "Copy login command".
 
@@ -127,7 +127,7 @@ To access your github generated token, go to Github.com.
 
 Login, and select your profile menu. 
 
-![](images/settingsmenu.png)
+![](images/settingsmenu.png | width=100)
 
 Go to Settings --> Developer Settings (bottom of left-side menu list) --> Personal Access Tokens (again, bottom of left-side menu)
 
@@ -137,7 +137,7 @@ Select the permissions for the token to be at least the bolded repo and delete_r
 
 Hit Generate Token. MAKE NOTE OF THIS TOKEN. Hit the copy button and store it somewhere for future reference.
 
-![](images/terraform.png)
+![](images/terraform.png | width=100)
 
 8. oc login line 
 
