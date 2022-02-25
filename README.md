@@ -20,7 +20,10 @@ Follow the Homebrew setup tutorial.
 B. Download Homebrew's Node.js: https://sourabhbajaj.com/mac-setup/Node.js/
 
 C. Download Homebrew's Docker: https://sourabhbajaj.com/mac-setup/Docker/
-BUT I find this tutorial a little confusing. Here is what to do:
+
+From the Homebrew tutorial:
+
+Docker for Mac can be downloaded here: https://docs.docker.com/desktop/mac/install/
 ```bash
 brew install cask
 brew install --cask docker
@@ -31,17 +34,17 @@ brew install --cask docker
 
 <img src="images/ibmcloudss.png" width="500">
 
-2. Clone the Iascable Repo here: https://github.com/cloud-native-toolkit/iascable
+2. Clone the iascable repo here: https://github.com/cloud-native-toolkit/iascable
 ```bash
 git clone https://github.com/cloud-native-toolkit/iascable.git
 ```
 
-3. Inside the Iascable directory, install node.js
+3. Inside the iascable directory, install node.js
 ```bash 
 npm install
 ```
 
-4. Create a Bill of Materials (BOM) called ```gitopsbootstrap-bom.yaml``` in Iascalbe.
+4. Create a Bill of Materials (BOM) called ```gitopsbootstrap-bom.yaml``` in iascalbe.
 
 ```python
 apiVersion: cloud.ibm.com/v1alpha1
@@ -63,6 +66,7 @@ spec:
   ```
   
   5. Run the BOM to generate the terraform file: 
+ 
   ./iascable build -i <location_of_gitopsbootstrap-bom.yaml_file> -o <location_for_output>
 ```bash 
 ./iascable build -i gitopsbootstrap-bom.yaml -o ./myFolder
@@ -70,15 +74,18 @@ spec:
 
 6. Accessing the generated folder from the above command, cd into myFolder --> multicloud-cluster --> terraform
 
-7. Edit the file ```multicloud-cluster.auto.tfvars``` Uncomment the last line of each section to add your modifications. 
+7. Edit the file ```multicloud-cluster.auto.tfvars```. Uncomment the last line of each section to add your modifications. 
 
 7a. Banner Text: The title of the top banner in the cluster
+
 ```config_banner_text="Turbonomics Tutorial"```
 
 7b. Namespace Name = The value that should be used for the namespace
+
 ```namespace_name="gitops-tools"```
 
 7c. Server URL: The url for the OpenShift api
+
 ```server_url="https://c100-e.us-east.containers.cloud.ibm.com:31361"```
 
 To access this, go to the OpenShift console from your cluster. 
@@ -87,9 +94,9 @@ To access this, go to the OpenShift console from your cluster.
 
 Click the dropdown from your username.
 
-![](images/loginos.png)
-
 Click "Copy login command".
+
+![](images/loginos.png)
 
 Hit display token.
 
@@ -102,6 +109,7 @@ Use the URL that follows ```--server=``` from the Login with this Token ```oc lo
 ```cluster_login_token="sha256....."```
 
 Following the same steps as above for the Server URL, go to the same page with your OpenShift token login. 
+
 Use the API token as the Cluster Login Token.
 **NOTE: The Cluster Login Token will time-out after about an hour.** You will have to modify the terraform file again if you cannot get to step 9 within an hour of generating this Login Token.
 
@@ -129,7 +137,7 @@ Use the API token as the Cluster Login Token.
 
 ```gitops-repo_token="...[your generated token]..."```
 
-To access your github generated token, go to Github.com.
+To access your Github-generated token, go to Github.com.
 
 Login, and select your profile menu. 
 
@@ -137,7 +145,7 @@ Login, and select your profile menu.
 
 Go to Settings --> Developer Settings (bottom of left-side menu list) --> Personal Access Tokens (again, bottom of left-side menu)
 
-Generate a new token. MAKE NOTE OF THIS TOKEN. IT WILL DISAPPEAR AFTER YOU VIEW IT.
+Generate a new token. **MAKE NOTE OF THIS TOKEN. IT WILL DISAPPEAR AFTER YOU VIEW IT.**
 
 Select the permissions for the token to be at least the bolded repo and delete_repo boxes. 
 
@@ -149,13 +157,14 @@ Hit Generate Token. MAKE NOTE OF THIS TOKEN. Hit the copy button and store it so
 8. Open up Docker to run. In the terraform directory, run the following commands. 
 
 Set the environment variable GITTOKEN to your generated Github token.
+
 ```export GITTOKEN="3792a189....." ```
 
 ```docker run -it -e TF_VAR_gitops-repo_token=$GITTOKEN -v ${PWD}:/terraform -w /terraform quay.io/ibmgaragecloud/cli-tools:v0.15```
 
 Terraform will begin running. 
-```$ terraform init```
-This will take a minute to run.
+
+```$ terraform init``` This will take a minute to run.
 
 ```$ terraform apply -auto-approve```
 This will take 10-15 minutes to compelte if this is your first-time running this setup. 
@@ -165,4 +174,4 @@ This will take 10-15 minutes to compelte if this is your first-time running this
 ![](images/consolebefore.png)
 ![](images/consoleafter.png)
 
-##That's it! You've completed the Beginner Turbonomics Set-Up Tutorial!
+## That's it! You've completed the Beginner Turbonomics Set-Up Tutorial!
