@@ -1,5 +1,5 @@
 ![](images/IBM_Software_Everywhere.png)
-# Software Everywhere Turbonomics BEGINNER Tutorial
+# Software Everywhere Turbonomics BEGINNER Set-Up Tutorial
 
 
 Hello! Welcome to Caroline Ehler's documentation/tutorial I've compiled for the Software Everywhere project!
@@ -141,70 +141,23 @@ Hit Generate Token. MAKE NOTE OF THIS TOKEN. Hit the copy button and store it so
 ![](images/terraform.png)
 
 
-8. Returning to the page we accessed from the Open Shift console, clicked, "Copy login command" to find the Server URL and Cluster Login Token, copy the line...
+8. In the terraform directory, run the following commands. 
 
-```oc login --token=sha256~AHgFrdMFbEXEk69R8eCObEw9cNzSk5HsGa13wBTdD0E --server=https://c100-e.us-east.containers.cloud.ibm.com:31361```
-
-Run that command in the terminal. 
-
-If it does not run, install the oc tools. To do so, head to your OpenShift Console. Hit the question mark, and select "Command Line Tools." Follow the instructions to download them to run the oc login. 
-
-9. To ...
+Set the environment variable GITTOKEN to your generated Github token.
 ```export GITTOKEN="3792a189....." ```
+
 ```docker run -it -e TF_VAR_gitops-repo_token=$GITTOKEN -v ${PWD}:/terraform -w /terraform quay.io/ibmgaragecloud/cli-tools:v0.15```
-```terraform init```
-```terraform apply -auto-approve```
+
+Terraform will begin running. 
+```$ terraform init```
+This will take a minute to run.
+
+```$ terraform apply -auto-approve```
+This will take 10-15 minutes to compelte if this is your first-time running this setup. 
 
 10. Check to see if your OpenShift console app options added more options like 
 
 ![](images/consolebefore.png)
 ![](images/consoleafter.png)
 
-
-
-
-
-4. Download this Bill of Materials (BOM1): https://github.com/cloud-native-toolkit/automation-solutions/blob/main/boms/turbonomic/turbo-gitops-bom.yaml 
-5. go to iascable directory
-6. Build Turbonomics Bill of Materials (BOM) with iascable tool
-```bash 
-./iascable build -i <location of BOM1 yaml> -o <location for output>
-```
-Note: the location should be a path
-6. Within the location of output from above, edit the resulting tfvars file with your environment info for your cluster
-7. Set your ibmapikey first
-8. Run the automation with a docker terraform container 
-```bash
-docker run -it -e TF_VAR_ibmcloud_api_key=$APIKEY -e IBMCLOUD_API_KEY=$APIKEY -v ${PWD}:/terraform -w /terraform quay.io/ibmgaragecloud/cli-tools:v0.15
-```
-
-
-/*
-5.  Pull this file down: https://github.com/cloud-native-toolkit/automation-solutions/blob/main/boms/turbonomic/turbo-gitops-bom.yaml 
-6. 
-4. Create a Bill of Materials (BOM) called ```gitopsbootstrap-bom.yaml``` ?where?
-
-```python
-apiVersion: cloud.ibm.com/v1alpha1
-kind: BillOfMaterial
-metadata:
-  name: multicloud-cluster
-spec:
-  modules:
-    - name: ocp-login
-    - name: olm
-    - name: gitops-namespace
-    - name: argocd-bootstrap
-    - name: gitops-console-link-job
-    - name: gitops-cluster-config
-      alias: config
-      variables:
-        - name: banner_text
-          important: true
-  ```
-  */
-## Contributing
-
-
-
-
+##That's it! You've completed the Beginner Turbonomics Set-Up Tutorial!
