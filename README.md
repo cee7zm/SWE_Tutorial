@@ -97,7 +97,7 @@ Use the URL that follows ```--server=``` from the Login with this Token ```oc lo
 
 Following the same steps as above for the Server URL, go to the same page with your OpenShift token login. 
 
-Use the API token as the Cluster Login Token
+Use the API token as the Cluster Login Token.
 
 7e. Gitops-repo_host: The host for the git repository. (Use github.com)
 
