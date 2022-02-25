@@ -140,7 +140,7 @@ Use the API token as the Cluster Login Token.
 
 To access your Github-generated token, go to Github.com.
 
-Login, and select your profile menu. 
+Login and select your profile menu. 
 
 <img src="images/settingsmenu.png" width="300">
 
@@ -157,13 +157,13 @@ Hit Generate Token. MAKE NOTE OF THIS TOKEN. Hit the copy button and store it so
 
 8. Open up Docker to run. In the terraform directory, run the following commands. 
 
-Set the environment variable GITTOKEN to your generated Github token.
+Set the environment variable GITTOKEN to your **generated Github token.**
 
 ```export GITTOKEN="3792a189....." ```
 
 ```docker run -it -e TF_VAR_gitops-repo_token=$GITTOKEN -v ${PWD}:/terraform -w /terraform quay.io/ibmgaragecloud/cli-tools:v0.15```
 
-Terraform will begin running. 
+Terraform will begin running. Now run:
 
 ```$ terraform init``` This will take a minute to run.
 
