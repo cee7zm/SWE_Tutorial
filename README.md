@@ -1,9 +1,6 @@
 ![](images/IBM_Software_Everywhere.png)
 # Software Everywhere Turbonomics BEGINNER Tutorial
-![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png | width=100)
-
-![](images/IBM_Software_Everywhere.png | width=100)
-
+<img src="images/IBM_Software_Everywhere.png" width="324" height="324">
 
 Hello! Welcome to Caroline Ehler's documentation/tutorial I've compiled for the Software Everywhere project!
 This tutorial is specific to Turbonomic.
@@ -31,7 +28,7 @@ D. If you don't have an IDE, I'm going to be using VS Code, so be sure to downlo
 ### Begin Tutorial
 1. Create a cluster on Red Hat Openshift using IBM Cloud. https://cloud.ibm.com/ 
 
-![](images/ibmcloudss.png | width=100)
+![](images/ibmcloudss.png)
 
 2. Clone the Iascable Repo here: https://github.com/cloud-native-toolkit/iascable
 ```bash
