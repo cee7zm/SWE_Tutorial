@@ -5,6 +5,9 @@
 Hello! Welcome to Caroline Ehler's documentation/tutorial I've compiled for the Software Everywhere project!
 This tutorial is specific to Turbonomic.
 
+**Contact**
+Should there be any issues with this tutorial, please contact caroline.ehler@ibm.com. Thanks!
+
 ## Tutorial
 ### Set-Up
 To begin, you'll need to be sure to have all of these things installed on your machine: Docker & Node.js
@@ -22,8 +25,6 @@ BUT I find this tutorial a little confusing. Here is what to do:
 brew install cask
 brew install --cask docker
 ```
-
-D. If you don't have an IDE, I'm going to be using VS Code, so be sure to download that too.
 
 ### Begin Tutorial
 1. Create a cluster on Red Hat Openshift using IBM Cloud. https://cloud.ibm.com/ 
@@ -60,11 +61,13 @@ spec:
         - name: banner_text
           important: true
   ```
+  
   5. Run the BOM to generate the terraform file: 
   ./iascable build -i <location_of_gitopsbootstrap-bom.yaml_file> -o <location_for_output>
 ```bash 
 ./iascable build -i gitopsbootstrap-bom.yaml -o ./myFolder
 ```
+
 6. Accessing the generated folder from the above command, cd into myFolder --> multicloud-cluster --> terraform
 
 7. Edit the file ```multicloud-cluster.auto.tfvars``` Uncomment the last line of each section to add your modifications. 
@@ -92,13 +95,15 @@ Hit display token.
 
 Use the URL that follows ```--server=``` from the Login with this Token ```oc login``` line.
 
+![](images/token.png)
+
 7d. Cluster Login Token:
 
 ```cluster_login_token="sha256....."```
 
 Following the same steps as above for the Server URL, go to the same page with your OpenShift token login. 
-
 Use the API token as the Cluster Login Token.
+**NOTE: The Cluster Login Token will time-out after about an hour.** You will have to modify the terraform file again if you cannot get to step 9 within an hour of generating this Login Token.
 
 7e. Gitops-repo_host: The host for the git repository. (Use github.com)
 
@@ -141,7 +146,7 @@ Hit Generate Token. MAKE NOTE OF THIS TOKEN. Hit the copy button and store it so
 ![](images/terraform.png)
 
 
-8. In the terraform directory, run the following commands. 
+8. Open up Docker to run. In the terraform directory, run the following commands. 
 
 Set the environment variable GITTOKEN to your generated Github token.
 ```export GITTOKEN="3792a189....." ```
@@ -155,7 +160,7 @@ This will take a minute to run.
 ```$ terraform apply -auto-approve```
 This will take 10-15 minutes to compelte if this is your first-time running this setup. 
 
-10. Check to see if your OpenShift console app options added more options like 
+10. Check to see if your OpenShift console app options added Argo like this:
 
 ![](images/consolebefore.png)
 ![](images/consoleafter.png)
