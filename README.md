@@ -141,9 +141,24 @@ Hit Generate Token. MAKE NOTE OF THIS TOKEN. Hit the copy button and store it so
 ![](images/terraform.png)
 
 
-8. oc login line 
+8. Returning to the page we accessed from the Open Shift console, clicked, "Copy login command" to find the Server URL and Cluster Login Token, copy the line...
 
+```oc login --token=sha256~AHgFrdMFbEXEk69R8eCObEw9cNzSk5HsGa13wBTdD0E --server=https://c100-e.us-east.containers.cloud.ibm.com:31361```
 
+Run that command in the terminal. 
+
+If it does not run, install the oc tools. To do so, head to your OpenShift Console. Hit the question mark, and select "Command Line Tools." Follow the instructions to download them to run the oc login. 
+
+9. To ...
+```export GITTOKEN="3792a189....." ```
+```docker run -it -e TF_VAR_gitops-repo_token=$GITTOKEN -v ${PWD}:/terraform -w /terraform quay.io/ibmgaragecloud/cli-tools:v0.15```
+```terraform init```
+```terraform apply -auto-approve```
+
+10. Check to see if your OpenShift console app options added more options like 
+
+![](images/consolebefore.png)
+![](images/consoleafter.png)
 
 
 
