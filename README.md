@@ -1,5 +1,9 @@
 ![](images/IBM_Software_Everywhere.png)
 # Software Everywhere Turbonomics BEGINNER Tutorial
+![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png | width=100)
+
+![](images/IBM_Software_Everywhere.png | width=100)
+
 
 Hello! Welcome to Caroline Ehler's documentation/tutorial I've compiled for the Software Everywhere project!
 This tutorial is specific to Turbonomic.
