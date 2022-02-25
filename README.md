@@ -6,6 +6,7 @@ Hello! Welcome to Caroline Ehler's documentation/tutorial I've compiled for the 
 This tutorial is specific to Turbonomic.
 
 **Contact**
+
 Should there be any issues with this tutorial, please contact caroline.ehler@ibm.com. Thanks!
 
 ## Tutorial
@@ -76,15 +77,15 @@ spec:
 
 7. Edit the file ```multicloud-cluster.auto.tfvars```. Uncomment the last line of each section to add your modifications. 
 
-7a. Banner Text: The title of the top banner in the cluster
+**7A.** Banner Text: The title of the top banner in the cluster
 
 ```config_banner_text="Turbonomics Tutorial"```
 
-7b. Namespace Name = The value that should be used for the namespace
+**7B.** Namespace Name = The value that should be used for the namespace
 
 ```namespace_name="gitops-tools"```
 
-7c. Server URL: The url for the OpenShift api
+**7C.** Server URL: The url for the OpenShift api
 
 ```server_url="https://c100-e.us-east.containers.cloud.ibm.com:31361"```
 
@@ -104,7 +105,7 @@ Use the URL that follows ```--server=``` from the Login with this Token ```oc lo
 
 ![](images/token.png)
 
-7d. Cluster Login Token:
+**7D.** Cluster Login Token:
 
 ```cluster_login_token="sha256....."```
 
@@ -113,27 +114,27 @@ Following the same steps as above for the Server URL, go to the same page with y
 Use the API token as the Cluster Login Token.
 **NOTE: The Cluster Login Token will time-out after about an hour.** You will have to modify the terraform file again if you cannot get to step 9 within an hour of generating this Login Token.
 
-7e. Gitops-repo_host: The host for the git repository. (Use github.com)
+**7E.** Gitops-repo_host: The host for the git repository. (Use github.com)
 
 ```gitops-repo_host="github.com"```
 
-7f. Gitops-repo_type: The type of the hosted git repository (github or gitlab).
+**7F.** Gitops-repo_type: The type of the hosted git repository (github or gitlab).
 
 ```gitops-repo_type="github"```
 
-7g. Gitops-repo_org: The org/group where the git repository exists/will be provisioned. (Your Github username)
+**7G.** Gitops-repo_org: The org/group where the git repository exists/will be provisioned. (Your Github username)
 
 ```gitops-repo_org="cee7zm"```
 
-7h. Gitops-repo_repo: The short name of the repository (i.e. the part after the org/group name) (The name for the repo the terraform will generate. Be sure the name you choose is not one of your existing repositories already).
+**7H.** Gitops-repo_repo: The short name of the repository (i.e. the part after the org/group name) (The name for the repo the terraform will generate. Be sure the name you choose is not one of your existing repositories already).
 
 ```gitops-repo_repo="my_turbo_repo"```
 
-7i. Fitops-repo_username: The username of the user with access to the repository (your github username)
+**7I.** Fitops-repo_username: The username of the user with access to the repository (your github username)
 
 ```gitops-repo_username="cee7zm"```
 
-7j. Gitops-repo_token: The personal access token used to access the repository
+**7J.** Gitops-repo_token: The personal access token used to access the repository
 
 ```gitops-repo_token="...[your generated token]..."```
 
