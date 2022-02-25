@@ -4,10 +4,6 @@
 Hello! Welcome to Caroline Ehler's documentation/tutorial I've compiled for the Software Everywhere project!
 This tutorial is specific to Turbonomic.
 
-## Installation
-See below for complete tutorial.
-## Usage
-
 ## Tutorial
 ### Set-Up
 To begin, you'll need to be sure to have all of these things installed on your machine: Docker & Node.js
@@ -82,11 +78,10 @@ Uncomment the last line of each section to add your modifications.
 ```server_url="https://c100-e.us-east.containers.cloud.ibm.com:31361"```
 
 To access this, go to the OpenShift console from your cluster. 
-![](images/IBM_Software_Everywhere.png)
+![](images/osconsole.png)
 Click the dropdown from your username.
-![](images/IBM_Software_Everywhere.png)
+![](images/loginos.png)
 Click "Copy login command".
-![](images/IBM_Software_Everywhere.png)
 Hit display token.
 Use the URL that follows ```--server=``` from the Login with this Token ```oc login``` line.
 
@@ -114,7 +109,7 @@ Use the API token as the Cluster Login Token
 ```gitops-repo_token="...[your generated token]..."```
 To access your github generated token, go to Github.com.
 Login, and select your profile menu. 
-![](images/IBM_Software_Everywhere.png)
+![](images/settingsmenu.png)
 Go to Settings --> Developer Settings (bottom of left-side menu list) --> Personal Access Tokens (again, bottom of left-side menu)
 Generate a new token. MAKE NOTE OF THIS TOKEN. IT WILL DISAPPEAR AFTER YOU VIEW IT. 
 Select the permissions for the token to be at least the bolded repo and delete_repo boxes. 
