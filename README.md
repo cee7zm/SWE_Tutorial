@@ -172,7 +172,7 @@ This will take 10-15 minutes to compelte if this is your first-time running this
 
 10. Check to see if everything downloaded correctly and you can access Turbonomic.
 
-**10A.** In the OpenShift Console, go to** Networking --> Routes**
+**10A.** In the OpenShift Console, go to **Networking --> Routes**
 ![](images/tutorial1a.png)
 
 **10B.** Verify thtat you are in the proper namespace you established earlier.
@@ -184,5 +184,5 @@ This will take 10-15 minutes to compelte if this is your first-time running this
 **10D.** You should be taken to the Turbonomic login page! If you made it here, congrats! You are finished with the tutorial. Go ahead and login, provide your license, and get started!
 ![](images/tut2.png)
 
-**
-Tutorial Complete. If you have any concerns, questions, or feedback, please email caroline.ehler@ibm.com. Thanks!**
+
+**Tutorial Complete. If you have any concerns, questions, or feedback, please email caroline.ehler@ibm.com. Thanks!**
