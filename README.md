@@ -170,9 +170,19 @@ Terraform will begin running. Now run:
 ```$ terraform apply -auto-approve```
 This will take 10-15 minutes to compelte if this is your first-time running this setup. 
 
-10. Check to see if your OpenShift console app options added Argo like this:
+10. Check to see if everything downloaded correctly and you can access Turbonomic.
 
-![](images/consolebefore.png)
-![](images/consoleafter.png)
+**10A.** In the OpenShift Console, go to** Networking --> Routes**
+![](images/tutorial1a.png)
 
-## That's it! You've completed the Beginner Turbonomics Set-Up Tutorial!
+**10B.** Verify thtat you are in the proper namespace you established earlier.
+![](images/tut1b.png)
+
+**10C.** Visit the location link to go to Turbonomic.
+![](images/tut1c.png)
+
+**10D.** You should be taken to the Turbonomic login page! If you made it here, congrats! You are finished with the tutorial. Go ahead and login, provide your license, and get started!
+![](images/tut2.png)
+
+**
+Tutorial Complete. If you have any concerns, questions, or feedback, please email caroline.ehler@ibm.com. Thanks!**
